@@ -101,7 +101,10 @@ function physics(circle, box, velocity) {
   }
 }
 
+let bill;
+
 function setup() {
+  bill = loadImage('bill.png');
   createCanvas(800, 800);
   blocks[0].color = color(150, 180, 230);
   blocks[1].color = color(255);
@@ -144,7 +147,7 @@ function draw() {
 
 
 
-  ellipse(ball.x, ball.y, ball.r*2, ball.r*2);
+  image(ball.x-ball.r, ball.y-ball.r, ball.r*2, ball.r*2);
 }
 
 function keyPressed(){
